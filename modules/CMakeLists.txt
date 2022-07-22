@@ -7,11 +7,11 @@ set(PROJECTNAME stereoModules)
 
 project(${PROJECTNAME})
 
-set(USE_SFM FALSE CACHE BOOL "Select false not to compile SFM")
+set(USE_SFM TRUE CACHE BOOL "Select false not to compile SFM")
 if(USE_SFM)
     add_subdirectory(SFM)
 endif()
-set(USE_DISPARITYMODULE FALSE CACHE BOOL "Select false not to compile DisparityModule")
+set(USE_DISPARITYMODULE TRUE CACHE BOOL "Select false not to compile DisparityModule")
 if(USE_DISPARITYMODULE)
     add_subdirectory(DisparityModule)
 endif()

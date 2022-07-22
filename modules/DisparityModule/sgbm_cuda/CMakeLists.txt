@@ -35,7 +35,7 @@ FILE(GLOB SRC_FILES *.cpp)
 FILE(GLOB CUDA_FILES *.cu)
 FILE(GLOB HDR_FILES *.h*)
 
-set(CUDA_NVCC_FLAGS "-ccbin gcc-7")
+set(CUDA_NVCC_FLAGS "-ccbin gcc-8")
 
 
 set(

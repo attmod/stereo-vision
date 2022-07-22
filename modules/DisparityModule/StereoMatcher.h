@@ -11,6 +11,7 @@
 #include "sgbm_cuda_header.h"
 
 #include "opencv2/ximgproc/disparity_filter.hpp"
+#include <opencv2/cudastereo.hpp>
 
 /**
 * Auxiliary function used for the WLS filtering stage

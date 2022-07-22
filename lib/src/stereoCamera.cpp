@@ -25,6 +25,7 @@
 #ifndef USING_GPU
     #ifdef OPENCV_GREATER_2
         #include <opencv2/xfeatures2d/nonfree.hpp>
+        //#include "opencv2/xfeatures2d.hpp"
     #else
         #include <opencv2/nonfree/nonfree.hpp>        
     #endif

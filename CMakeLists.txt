@@ -30,7 +30,7 @@ icubcontrib_set_default_prefix()
 ## locate OpenCV libraries
 find_package(OpenCV REQUIRED)
 
-set(COMPILE_LIB FALSE CACHE BOOL "Select false not to compile library")
+set(COMPILE_LIB TRUE CACHE BOOL "Select false not to compile library")
 
 ## add libraries
 if(COMPILE_LIB)
@@ -44,4 +44,4 @@ add_subdirectory(modules)
 add_subdirectory(app)
 
 #icubcontrib_finalize_export(stereoVision)
-icubcontrib_add_uninstall_target()
+#icubcontrib_add_uninstall_target()

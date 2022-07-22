@@ -101,7 +101,7 @@ void StereoMatcherNew::filterBLF(string kind = "base")
         case SM_BLF_FILTER::BLF_CUDA:
         {
             cv::Mat grayL = this->stereo->getLRectified();
-            cv::cvtColor(grayL, grayL, CV_BGR2GRAY);
+            cv::cvtColor(grayL, grayL, cv::COLOR_BGRA2GRAY);
 
             imageGpu.upload(grayL);
             gpuDisp.upload(input16);
@@ -426,8 +426,8 @@ void StereoMatcherNew::matchSGBMCUDA()
     cv::Mat grayL = this->stereo->getLRectified();
     cv::Mat grayR = this->stereo->getRRectified();
 
-    cv::cvtColor(grayL, grayL, CV_BGR2GRAY);
-    cv::cvtColor(grayR, grayR, CV_BGR2GRAY);
+    cv::cvtColor(grayL, grayL, cv::COLOR_BGRA2GRAY);
+    cv::cvtColor(grayR, grayR, cv::COLOR_BGRA2GRAY);
 
     outputDm = zy_remap(grayL, grayR);
 

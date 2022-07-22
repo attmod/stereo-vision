@@ -1124,7 +1124,7 @@ Point3f DispModule::get3DPoints(int u, int v, const string &drive)
         return point;
 
     const Mat& Q=this->stereo->getQ();
-    IplImage disp16=disp16m;
+    IplImage disp16=cvIplImage(disp16m);
     CvScalar scal=cvGet2D(&disp16,v,u);
     double disparity=scal.val[0]/16.0;
     float w=(float)(disparity*Q.at<double>(3,2)+Q.at<double>(3,3));
